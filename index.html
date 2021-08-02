@@ -7,24 +7,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RandomPasswordGenerator</title>
   <link rel="stylesheet" href="style.css">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div>
-    <p>Choose your password options!</p>
-    <label>
-      Capital case
-      <input type="checkbox">
-    </label>
-    <label>
-      Numbers
-      <input type="checkbox">
-    </label>
-    <label>
-      Special characters
-      <input type="checkbox">
-    </label>
+  <header>
+    made by Patryk Ulichnowski
+  </header>
+  <div class="grid-wrap">
+    <div class="options">
+      <div class="generator">
+        <input type="number" placeholder="Password length" id='passwdlgth'>
+        <button id='genButton' onclick="generatePassword()">Generate</button>
+      </div>
+      <p>Choose your password options!</p>
+      <label>
+        Lowercase
+        <input type="checkbox" id='lcase'>
+      </label>
+      <label>
+        Uppercase
+        <input type="checkbox" id='ucase'>
+      </label>
+      <label>
+        Numbers
+        <input type="checkbox" id='nums'>
+      </label>
+      <label>
+        Special characters
+        <input type="checkbox" id='chars'>
+      </label>
+    </div>
+    <div class="passwdbox">
+      <h1>Here is your password</h1>
+      <p id='passwdP'></p>
+    </div>
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>
